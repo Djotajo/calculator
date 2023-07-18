@@ -51,3 +51,7 @@ button {
     flex-basis: auto;
     border-radius: 12px;
 }
+
+.operator, #buttonEquals {
+    background-color: burlywood;
+}

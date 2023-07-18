@@ -12,6 +12,8 @@ const divideButton = document.querySelector("#buttonDivide");
 
 const deleteOne = document.querySelector("#buttonC");
 
+const dotButton = document.querySelector("#buttonDot");
+
 deleteOne.addEventListener("click", function(){
     screen.textContent = screen.textContent.slice(0, -1);
     expression = screen.textContent;
@@ -54,8 +56,21 @@ for (n of numbers1) {
         clearScreen()
         screen.textContent += this.textContent;
         expression = screen.textContent;
-        console.log(this.textContent)});
+        console.log(screen.textContent.split(" ").length)});
 }
+
+dotButton.addEventListener("click", function(e) {
+    console.log(screen.textContent[screen.textContent.length - 1]);
+    if (screen.textContent.split(" ").length == 1 && screen.textContent.split(" ")[0].includes(".") == false) {
+    if (isNaN(+screen.textContent[screen.textContent.length - 1]) == false && screen.textContent[screen.textContent.length - 1] != " ") {
+        screen.textContent += this.textContent;
+        expression = screen.textContent;
+    }} else if (screen.textContent.split(" ").length == 3 && screen.textContent.split(" ")[2].includes(".") == false) {
+        if (isNaN(+screen.textContent[screen.textContent.length - 1]) == false && screen.textContent[screen.textContent.length - 1] != " ") {
+            screen.textContent += this.textContent;
+            expression = screen.textContent;
+        }}
+});
 
 const operate = function(expression) {
     let operation = expression.split(" ");
