@@ -46,9 +46,6 @@ button {
     flex-basis: auto;
 }
 
-/* #bottomRow {
-    display: flex;
-} */
 
 #zero, #buttonAC, #buttonC, #buttonDot {
     flex-grow: 1;

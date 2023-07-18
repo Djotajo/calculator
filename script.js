@@ -48,19 +48,14 @@ expression = "";
 })
 
 
-console.log(numbers);
-console.log(numbers1);
-
 for (n of numbers1) {
     n.addEventListener("click", function(e) {
         clearScreen()
         screen.textContent += this.textContent;
-        expression = screen.textContent;
-        console.log(screen.textContent.split(" ").length)});
+        expression = screen.textContent;});
 }
 
 dotButton.addEventListener("click", function(e) {
-    console.log(screen.textContent[screen.textContent.length - 1]);
     if (screen.textContent.split(" ").length == 1 && screen.textContent.split(" ")[0].includes(".") == false) {
     if (isNaN(+screen.textContent[screen.textContent.length - 1]) == false && screen.textContent[screen.textContent.length - 1] != " ") {
         screen.textContent += this.textContent;
@@ -102,8 +97,6 @@ const clearScreen = function() {
 for (i of operators) {
     i.addEventListener("click", function(e) {
         clearScreen();
-        console.log(expression);
-        console.log(this.textContent);
         if ((expression == "" && this.textContent == " * ")|| (expression == "" && this.textContent == " / ")) {
             screen.textContent = "";
             expression = "";
@@ -114,22 +107,14 @@ for (i of operators) {
             operator = this.textContent;
             screen.textContent += this.textContent;
         } else {
-
         numberOne = +screen.textContent;
         operator = this.textContent;
-        // console.log(numberOne);
-        // console.log(operator);
-        // console.log(typeof operator);
-
         screen.textContent += this.textContent;
         expression = screen.textContent;
-        // console.log(this.textContent)
     }});
 }
 
 equals.addEventListener("click", function() {
-    console.log(expression.split(" ").length);
-    console.log(expression.split(" "));
     if (expression.split(" ")[2] != "") {
         operate(expression);
         numberOne = +screen.textContent;
