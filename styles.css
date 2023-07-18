@@ -1,10 +1,12 @@
 #screen {
-    height: 3em;
+    min-height: 2em;
+    height: auto;
     background-color: blueviolet;
     text-align: center;
     color: white;
-    padding: 1em;
-    font-size: 18px;
+    padding: 15px;
+    font-size: 2em;
+    word-wrap: break-word;
 }
 
 .main {
@@ -23,6 +25,8 @@
     background-color: aquamarine;
     padding: 10px;
     border-radius: 12px;
+    outline: solid black 1px;
+    
 }
 
 .row {
@@ -46,7 +50,7 @@ button {
     display: flex;
 } */
 
-#zero {
+#zero, #buttonAC, #buttonC, #buttonDot {
     flex-grow: 1;
     flex-basis: auto;
     border-radius: 12px;
@@ -54,4 +58,30 @@ button {
 
 .operator, #buttonEquals {
     background-color: burlywood;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+#githubLogo {
+    width: 1.5em;
+    height: auto;
+}
+
+.copyrights {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    
 }
